@@ -1,6 +1,6 @@
 ## sizeof
 |    type     | size |
-| ----------- | ---- |
+| :---------- | ---: |
 | int         |  4   |
 | short int   |  2   |
 | long int    |  8   |
