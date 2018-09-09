@@ -13,3 +13,15 @@ int main()
     printf("long double: %lu\n", sizeof(long double));
     return 0;
 }
+
+/** output **
+c lang data type sizeof:
+int: 4
+short int: 2
+long int: 8
+unsigned int: 4
+char: 1
+float: 4
+double: 8
+long double: 16
+*/
