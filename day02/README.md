@@ -34,4 +34,9 @@
 30ul       /* 无符号长整数 */
 ```
 
+## C 存储类
+> * auto
+> * register
+> * static
+> * extern
 
