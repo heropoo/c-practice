@@ -4,10 +4,11 @@ double get_average(int arr[], int size);
 
 int main()
 {
+	int size = 5;
 	int babance[5] = {10002,3233,321,23,4};
 	double avg;
 
-	avg = get_average(babance, 5);
+	avg = get_average(babance, size);
 
 	printf("avg is %f\n", avg);
 
