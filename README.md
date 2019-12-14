@@ -1,10 +1,10 @@
 # c-practice
 c practice
 
-## my evnirment
+## docker
 ```
-Arch Linux x86_64
-gcc version 8.2.1
+docker build -t heropoo/gcc-ubuntu .
+docker run -ti -v $PWD:/root/c-practice heropoo/gcc-ubuntu bash
 ```
 
 查看动态链接库
