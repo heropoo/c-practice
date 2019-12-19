@@ -15,3 +15,6 @@ assemble: hello.s
 
 link: hello.o
 	gcc hello.o -o hello
+
+clean:
+	-rm -rf *.i *.o *.s hello
