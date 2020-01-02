@@ -55,9 +55,11 @@ int main(int argc, char **argv)
         printf("read() returned %d\n", i);
         return -1;
     }
+    printf("i: %d\n", i);
     src[i] = 0; // add EOF character
     close(fd);
 
+    //printf("read src: %s\n", src);
     program();
     return eval();
 }
