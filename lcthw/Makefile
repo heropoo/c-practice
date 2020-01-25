@@ -1,4 +1,5 @@
 CFLAGS=-Wall -g
+CC=gcc
 
 all: ex3
 
