@@ -73,9 +73,31 @@ static int gettok() {
 }
 
 //===----------------------------------------------------------------------===//
+// Parser
+//===----------------------------------------------------------------------===//
+
+/// CurTok/getNextToken - Provide a simple token buffer.  CurTok is the current
+/// token the parser is looking at.  getNextToken reads another token from the
+/// lexer and updates CurTok with its results.
+static int CurTok;
+static int getNextToken() { return CurTok = gettok(); }
+
+static void Mainloop() {
+    while(true) {
+        fprintf(stderr, "ready> ");
+    }
+}
+
+//===----------------------------------------------------------------------===//
 // Main driver code.
 //===----------------------------------------------------------------------===//
 
 int main() {
+    
+    // Prime the first token.
+    fprintf(stderr, "ready> ");
+
+    getNextToken();
+
     return 0;
 }

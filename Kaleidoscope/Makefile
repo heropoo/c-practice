@@ -1,5 +1,5 @@
 test: main
-	./main main.cpp
+	./main
 
 clean:
 	rm -rf ./main
