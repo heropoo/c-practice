@@ -25,7 +25,7 @@ struct Connection
     struct Database *db;
 };
 
-void die(char *message)
+void die(const char *message)
 {
     if (errno)
     {
@@ -52,7 +52,7 @@ void Database_load(struct Connection *conn)
         die("Failed to load database.");
 }
 
-struct Connection *Database_open(char *filename, char mode)
+struct Connection *Database_open(const char *filename, const char mode)
 {
     struct Connection *conn = malloc(sizeof(struct Connection));
     if (!conn)
@@ -119,7 +119,7 @@ void Database_create(struct Connection *conn)
     }
 }
 
-void Database_set(struct Connection *conn, int id, char *name, char *email)
+void Database_set(struct Connection *conn, int id, const char *name, const char *email)
 {
     struct Address *addr = &conn->db->rows[id];
     if (addr->set)
@@ -172,7 +172,7 @@ void Database_list(struct Connection *conn)
     }
 }
 
-int main(int argc, char *argv[])
+int main(const int argc, char *argv[])
 {
     if (argc < 3)
         die("USAGE: my_ex17 <dbfile> <action> [action params]");
