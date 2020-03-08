@@ -1,8 +1,8 @@
-.vscode/
 main
 *.out
 *.log
 *.db
+*.exe
 fanzhidongyzby-cit/
 rswier-c4/
 write-a-C-interpreter/
