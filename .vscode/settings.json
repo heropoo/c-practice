@@ -1,5 +1,8 @@
 {
     "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
         "iostream": "cpp",
         "string": "cpp",
         "array": "cpp",
@@ -41,6 +44,11 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "optional": "cpp",
+        "map": "cpp",
+        "cinttypes": "cpp",
+        "cstring": "cpp",
+        "list": "cpp"
     }
 }
