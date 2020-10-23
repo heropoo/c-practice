@@ -15,7 +15,8 @@ struct Person *Person_create(char *name, int age, int height, int weight)
     struct Person *who = malloc(sizeof(struct Person));
     assert(who != NULL);
 
-    who->name = strdup(name);
+    who->name = strdup(name); // 使用strdup来复制字符串name，是为了确保结构体真正拥有它。strdup的行为实际上类似malloc但是它同时会将原来的字符串复制到新创建的内存。
+    //who->name = name;
     who->age = age;
     who->height = height;
     who->weight = weight;
@@ -29,6 +30,7 @@ void Person_destroy(struct Person *who)
 
     free(who->name);
     free(who);
+    //不想显式释放内存又能避免内存泄露的办法是引入libGC库。你需要把所有的malloc换成GC_malloc，然后把所有的free删掉。
 }
 
 void Person_print(struct Person *who)
