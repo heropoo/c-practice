@@ -49,6 +49,18 @@
         "map": "cpp",
         "cinttypes": "cpp",
         "cstring": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "bit": "c",
+        "chrono": "c",
+        "compare": "c",
+        "concepts": "c",
+        "condition_variable": "c",
+        "future": "c",
+        "mutex": "c",
+        "ranges": "c",
+        "ratio": "c",
+        "stop_token": "c",
+        "thread": "c",
+        "variant": "c"
     }
 }

@@ -39,7 +39,7 @@ void die(const char *message)
     exit(1);
 }
 
-void Address_print(struct Address *addr)
+void Address_print(const struct Address *addr)
 {
     printf("%d\t|\t%s\t|\t%s\n", addr->id, addr->name, addr->email);
 }
@@ -175,7 +175,13 @@ void Database_list(struct Connection *conn)
 int main(const int argc, char *argv[])
 {
     if (argc < 3)
-        die("USAGE: my_ex17 <dbfile> <action> [action params]");
+    {
+        char msg[255] = "USAGE: ";
+        // "USAGE: my_ex17 <dbfile> <action> [action params]");
+        strcat(msg, argv[0]);
+        strcat(msg, " <dbfile> <action> [action params]\n");
+        die(msg);
+    }
 
     char *filename = argv[1];
     char action = argv[2][0];
