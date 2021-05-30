@@ -21,7 +21,7 @@ void print_letters(char arg[])
         char ch = arg[i];
         if (can_print_it(ch))
         {
-            printf("'%c' == %d", ch, ch);
+            printf("'%c' == %d ", ch, ch);
         }
     }
 

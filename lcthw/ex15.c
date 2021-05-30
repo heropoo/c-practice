@@ -4,18 +4,23 @@ int main(int argc, char *argv[])
 {
     int ages[] = {23, 43, 12, 89, 2};
     char *names[] = {
-        "Alan", "Frank",
+        "Ala", "Franky",
         "Mary", "John", "Lisa"};
 
     int count = sizeof(ages) / sizeof(int);
+    printf("sizeof ages: %ld, sizeof names:%ld\n", sizeof(ages), sizeof(names));
+
+    printf("--------------------------------\n");
+
+    
     int i = 0;
 
     for (i = 0; i < count; i++)
     {
-        printf("%s has %d years alive.\n", names[i], ages[i]);
+        printf("%d, %s has %d years alive.\n", i, names[i], ages[i]);
     }
 
-    printf("------------------\n");
+    printf("--------------------------------\n");
 
     // setup the pointers to the start of the arrays
     int *cur_age = ages;
@@ -26,13 +31,13 @@ int main(int argc, char *argv[])
         printf("%s is %d years old.\n", *(cur_name + i), *(cur_age + i));
     }
 
-    printf("------------------\n");
+    printf("--------------------------------\n");
     for (i = 0; i < count; i++)
     {
         printf("%s is %d years old again.\n", cur_name[i], cur_age[i]);
     }
 
-    printf("---\n");
+    printf("--------------------------------\n");
 
     // fourth way with pointers in a stupid complex way
     for (cur_name = names,
