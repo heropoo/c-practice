@@ -1,7 +1,7 @@
 CFLAGS=-Wall -g
 CC=gcc
 
-all: ex3
+#all: ex3
 
 clean:
 	- rm -rf *.dSYM
