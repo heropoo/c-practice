@@ -9,11 +9,9 @@ struct Person
     int age;
     int height;
     int weight;
-};
+};  
 
-struct Person
-    *
-    Person_create(char *name, int age, int height, int weight)
+struct Person *Person_create(char *name, int age, int height, int weight)
 {
     struct Person *who = malloc(sizeof(struct Person));
     assert(who != NULL);

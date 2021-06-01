@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
     int ages[] = {23, 43, 12, 89, 2};
     char *names[] = {
         "Ala", "Franky",
-        "Mary", "John", "Lisa"};
+        "玛丽", "John", "Lisa"};
 
     int count = sizeof(ages) / sizeof(int);
     printf("sizeof ages: %ld, sizeof names:%ld\n", sizeof(ages), sizeof(names));
