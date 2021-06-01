@@ -4,7 +4,7 @@
 #include <string.h>
 
 #define MAX_DATA 512
-#define MAX_ROWS 10
+#define MAX_ROWS 100
 
 struct Address
 {
