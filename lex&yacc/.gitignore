@@ -1,0 +1,8 @@
+.vscode/
+
+*.pgm
+*.o
+*l.c
+*l.h
+*y.c
+*y.h
