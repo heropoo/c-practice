@@ -8,3 +8,7 @@ rswier-c4/
 write-a-C-interpreter/
 *.dSYM/
 .vscode/
+
+#vim
+*.un~
+*~
