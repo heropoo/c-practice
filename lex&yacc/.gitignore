@@ -6,3 +6,5 @@
 *l.h
 *y.c
 *y.h
+*.tab.c
+*.tab.h
