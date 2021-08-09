@@ -19,21 +19,17 @@ object:		NOUN
 	;
 %%
 
-// extern FILE *yyin;
+extern FILE *yyin;
 
-// int main()
-// {
-// 	while(!feof(yyin)) {
-// 		yyparse();
-// 	}
-// 	return 0;
-// }
-
-int main(void) {
-    yyparse();
-    return 0;
+main()
+{
+	while(!feof(yyin)) {
+		yyparse();
+	}
 }
 
-void yyerror(char *s) {
+yyerror(s)
+char *s;
+{
     fprintf(stderr, "%s\n", s);
 }
