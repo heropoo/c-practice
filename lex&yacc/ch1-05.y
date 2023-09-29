@@ -21,15 +21,25 @@ object:		NOUN
 
 extern FILE *yyin;
 
-main()
-{
-	while(!feof(yyin)) {
-		yyparse();
-	}
+// main()
+// {
+// 	while(!feof(yyin)) {
+// 		yyparse();
+// 	}
+// }
+
+// yyerror(s)
+// char *s;
+// {
+//     fprintf(stderr, "%s\n", s);
+// }
+
+int main(void) {
+    yyparse();
+    return 0;
 }
 
-yyerror(s)
-char *s;
-{
+void yyerror(char *s) {
     fprintf(stderr, "%s\n", s);
 }
+

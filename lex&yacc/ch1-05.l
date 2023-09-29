@@ -15,9 +15,10 @@ int state;
 
 \n	{ state = LOOKUP; }
 
-\.\n	{	state = LOOKUP;
-		return 0; /* end of sentence */
-	}
+\.\n	{	
+			state = LOOKUP;
+			return 0; /* end of sentence */
+		}
 
 ^verb	{ state = VERB; }
 ^adj	{ state = ADJECTIVE; }

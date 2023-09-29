@@ -2,10 +2,11 @@
 
 # make and run all the example programs for
 # lex & yacc, Second Edition
-CC = gcc -g
+CFLAGES=-Wall -g
+CC = gcc-11
 LIBS = -ly -ll
 LEX = flex
-YACC = yacc
+YACC = bison -y
 CFLAGS = -DYYDEBUG=1
 
 PROGRAMS1 = ch1-01.pgm ch1-02.pgm ch1-03.pgm ch1-04.pgm ch1-05.pgm ch1-06.pgm
