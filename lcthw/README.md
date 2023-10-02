@@ -1,5 +1,6 @@
 # 笨办法学C (Learn C The Hard Way) 
 
+- https://www.cntofu.com/book/25/index.html
 - https://github.com/wizardforcel/lcthw-zh.git
 
 Ubuntu
