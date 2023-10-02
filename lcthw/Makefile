@@ -7,3 +7,4 @@ clean:
 	- rm -rf *.dSYM
 # 	find . -executable -type f|xargs rm -rf
 	find . -name "*.exe" |xargs rm -rf 
+	- rm -rf ex14
