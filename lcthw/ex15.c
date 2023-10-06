@@ -40,8 +40,7 @@ int main(int argc, char *argv[])
     printf("--------------------------------\n");
 
     // fourth way with pointers in a stupid complex way
-    for (cur_name = names,
-        cur_age = ages;
+    for (cur_name = names,cur_age = ages;
          (cur_age - ages) < count;
          cur_name++, cur_age++)
     {
