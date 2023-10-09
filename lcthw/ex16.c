@@ -17,7 +17,7 @@ struct Person *Person_create(char *name, int age, int height, int weight)
 
     who->name = strdup(name); // 使用strdup来复制字符串name，是为了确保结构体真正拥有它。strdup的行为实际上类似malloc但是它同时会将原来的字符串复制到新创建的内存。
     //who->name = name;
-    who->age = age;
+    who->age = age; // x->y是(*x).y的简写
     who->height = height;
     who->weight = weight;
 
