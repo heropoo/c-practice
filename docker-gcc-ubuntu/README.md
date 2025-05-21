@@ -4,10 +4,10 @@ Ubuntu with sshd
 
 ## build 
 ```
-docker build -t heropoo/ubuntu .
+docker build -t gcc-ubuntu .
 ```
 
 ## run 
 ```
-docker run -p 2222:22 -d heropoo/ubuntu
+docker run -p 2222:22 -d $PWD/../:/root/c-practice gcc-ubuntu
 ```

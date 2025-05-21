@@ -14,7 +14,7 @@ LABEL org.opencontainers.image.authors="aiyouyou1000@163.com"
 # RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list \
 #    && sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 
-RUN apt-get update && apt-get install -y openssh-server
+RUN apt-get update && apt-get install -y openssh-server gcc make flex bison
 
 RUN sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config
 
@@ -22,8 +22,6 @@ ENV ROOT_PASSWORD 123456
 RUN echo "root:${ROOT_PASSWORD}" | chpasswd
 
 EXPOSE 22
-
-WORKDIR /root/c-projects
 
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
