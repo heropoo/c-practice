@@ -13,4 +13,4 @@ CFLAGS = -DYYDEBUG=1
 
 clean:
 	- rm -rf *.o *.pgm *l.c *y.c *.tab.c *.tab.h
-	- rm -rf ch1-02
+	- rm -rf ch1-02 ch1-04 
