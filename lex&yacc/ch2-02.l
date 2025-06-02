@@ -1,3 +1,5 @@
+%option noyywrap
+
 %{
 unsigned charCount = 0, wordCount = 0, lineCount = 0;
 %}
@@ -9,7 +11,7 @@ eol  \n
 {eol}	{ charCount++; lineCount++; }
 .	charCount++;
 %%
-main(argc,argv)
+int main(argc,argv)
 int argc;
 char **argv;
 {
