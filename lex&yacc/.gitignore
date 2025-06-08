@@ -6,6 +6,7 @@
 *y.c
 *.tab.c
 *.tab.h
+*y.h
 
 ch1-02
 ch1-04

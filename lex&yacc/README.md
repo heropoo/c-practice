@@ -3,6 +3,11 @@
 - lex: flex
 - yacc: bison
 
+```
+# on Ubuntu 24.04.2 LTS
+apt install flex bison libfl-dev libbison-dev
+```
+
 ### 参考
 - [lex yacc 2nd Edition - code](https://resources.oreilly.com/examples/9781565920002)
 

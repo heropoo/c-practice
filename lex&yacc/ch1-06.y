@@ -2,6 +2,10 @@
 #include <stdio.h>
 /* we found the following required for some yacc implementations. */
 /* #define YYSTYPE int */
+
+int yylex(void);
+void yyerror(char *s);
+
 %}
 
 %token NOUN PRONOUN VERB ADVERB ADJECTIVE PREPOSITION CONJUNCTION
@@ -41,14 +45,19 @@ prep_phrase:	PREPOSITION NOUN
 
 extern FILE *yyin;
 
-main()
+int main()
 {
-	while(!feof(yyin)) {
+	// while(!feof(yyin)) {
+	// 	yyparse();
+	// }
+	do{
 		yyparse();
-	}
+	 }while(!feof(yyin));
+
+	return 0;
 }
 
-yyerror(s)
+void yyerror(s)
 char *s;
 {
     fprintf(stderr, "%s\n", s);
