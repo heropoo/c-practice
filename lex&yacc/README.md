@@ -1,7 +1,9 @@
 ## lex&yacc
 
-- lex: flex
-- yacc: bison
+- Ubuntu 24.04.2 LTS
+- gcc 13.3.0
+- lex: flex 2.6.4
+- yacc: bison 3.8.2
 
 ```
 # on Ubuntu 24.04.2 LTS
