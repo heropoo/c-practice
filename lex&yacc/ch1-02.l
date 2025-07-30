@@ -1,3 +1,5 @@
+%option noyywrap
+
 %{
 /*
  * this sample demonstrates (very) simple recognition:

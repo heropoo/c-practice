@@ -7,6 +7,12 @@
 
 #define LOOKUP 0 /* default - not a defined word type. */
 
+int
+add_word(int type, char *word);
+
+int
+lookup_word(char *word);
+
 int state; 
 
 %}

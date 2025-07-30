@@ -1,3 +1,5 @@
+%option noyywrap
+
 %{
 /*
  * Word recognizer with a symbol table.
@@ -54,9 +56,10 @@ int lookup_word(char *word);
 .	/* ignore anything else */ ;
 
 %%
-main()
+int main()
 {
 	yylex();
+	return 0;
 }
 
 /* define a linked list of words and types */
@@ -71,12 +74,12 @@ struct word *word_list; /* first element in word list */
 extern void *malloc();
 
 int
-add_word(int type, char *word)
+add_word(int type, char *w)
 {
 	struct word *wp;	
 
-	if(lookup_word(word) != LOOKUP) {
-		printf("!!! warning: word %s already defined \n", word);
+	if(lookup_word(w) != LOOKUP) {
+		printf("!!! warning: word %s already defined \n", w);
 		return 0;
 	}
 	
@@ -88,8 +91,8 @@ add_word(int type, char *word)
 
 	/* have to copy the word itself as well */
 	
-	wp->word_name = (char *) malloc(strlen(word)+1);
-	strcpy(wp->word_name, word);
+	wp->word_name = (char *) malloc(strlen(w)+1);
+	strcpy(wp->word_name, w);
 	wp->word_type = type;
 	word_list = wp;
 	return 1;	/* it worked */
